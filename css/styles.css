@@ -231,7 +231,7 @@ p {color: var(--p-text-color);}
     left: 50%;
     min-width: 528px;
     min-height: 581px;
-    padding: 15px;
+    padding: 40px;
     background-color: var(--white-color);
 
     transform: translate(-50%,-50%) scale(1);
@@ -277,9 +277,7 @@ button.modal-button {
 .modal-form {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
-    
+    max-width: 448px;
     filter: none;
 }
 .form-field {
@@ -288,12 +286,15 @@ button.modal-button {
     margin-bottom: 10px;
 }
 .modal-title {
-    
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
+}
+input {
+    cursor: pointer;
 }
 .form-field input,
 .form-field textarea {
@@ -306,6 +307,7 @@ button.modal-button {
 .form-field label {
     padding-left: 0;
     margin-left: 0;
+    text-align: start;
     color: var(--p-text-color);
     font-weight: 400;
     font-size: 12px;
