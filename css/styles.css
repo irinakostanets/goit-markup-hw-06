@@ -254,31 +254,11 @@ button.modal-button {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover svg.modal-button-icon,
-.modal-button:focus svg.modal-button-icon{
-    color: var(--accent-color);
-}
-.modal-button-sub {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
- 
-    display: block;
-    margin: 0 auto;
-    padding: 10px 52px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-
-    color: var(--white-color);
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent-color);
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
+.modal-button:hover,
+.modal-button:focus {
+    fill: var(--accent-color);
 }
 
 .modal-form {
@@ -300,6 +280,18 @@ button.modal-button {
     text-align: center;
     letter-spacing: 0.03em;
 }
+.input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 input {
     cursor: pointer;
 }
@@ -310,14 +302,18 @@ input {
     background-color: var(--white-color);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field input:hover,
 .form-field input:focus {
     border-color: var(--accent-color);
-    color: var(--accent-color);
 }
-.form-field label {
+.input-wrapper:hover,
+.input-wrapper:focus {
+    fill: var(--accent-color);
+}
+.form-field label,
+.input-wrapper label {
     padding-left: 0;
     margin-left: 0;
     text-align: start;
@@ -341,7 +337,6 @@ input {
 .form-field textarea:hover,
 .form-field textarea:focus {
     border: 2px solid var(--accent-color);
-    border-radius: 4px;
 }
 .form-checkbox label {
     margin-top: 20px;
@@ -373,6 +368,35 @@ input {
     background-color: var(--accent-color);
     fill: var(--white-color);
     border: none;
+}
+.modal-check:focus + .check-text span {
+    border-color: var(--accent-color);
+}
+.modal-button-sub {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    display: block;
+    margin: 0 auto;
+    padding: 10px 52px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--white-color);
+    background: var(--accent-color);
+    
+    border-color: var(--accent-color);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.modal-button-sub:focus,
+.modal-button-sub:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .section.work,
@@ -583,6 +607,7 @@ input {
     margin-left: 8px;
 }
 .button {
+    display: flex;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -776,9 +801,9 @@ input {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
     
     color: rgba(255, 255, 255, 0.6);
 
@@ -800,7 +825,6 @@ label {
 }
 .footer-button {
     
-    display: flex;
     align-items: center;
     margin-left: 12px;
     padding: 10px 28px;
