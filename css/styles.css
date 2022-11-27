@@ -10,6 +10,7 @@
     --light-backgroud-color: #F5F5F5;
     --dark-backgroud-color: #2F303A;
     --white-color: #FFFFFF;
+    --black-color: #000000;
     --button-color: #F5F4FA;
 }
 
@@ -248,10 +249,16 @@ button.modal-button {
     margin-bottom: 2px;
     top: 0;
     right: 0;
+    color: var(--black-color);
     background-color: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover svg.modal-button-icon,
+.modal-button:focus svg.modal-button-icon{
+    color: var(--accent-color);
 }
 .modal-button-sub {
     font-weight: 700;
@@ -303,6 +310,12 @@ input {
     background-color: var(--white-color);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field input:hover,
+.form-field input:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 .form-field label {
     padding-left: 0;
@@ -315,6 +328,21 @@ input {
     letter-spacing: 0.01em;
     text-transform: none;
 }
+.feedback {
+    resize: none;
+}
+.form-field ::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.form-field textarea:hover,
+.form-field textarea:focus {
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+}
 .form-checkbox label {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -326,6 +354,27 @@ input {
     color: var(--p-text-color);
     text-transform: none;
 }
+.check-text {
+    display: flex;
+    align-items: center;
+}
+.check-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+.modal-check:checked + .check-text span {
+    background-color: var(--accent-color);
+    fill: var(--white-color);
+    border: none;
+}
+
 .section.work,
 .section.our-team,
 .section.our-services {
