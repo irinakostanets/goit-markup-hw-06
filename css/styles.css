@@ -243,11 +243,9 @@ button.modal-button {
     width: 30px;
     height: 30px;
     padding: 6px;
-    margin-top: 8px;
-    margin-right: 8px;
     margin-bottom: 2px;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     color: var(--black-color);
     background-color: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -294,8 +292,14 @@ button.modal-button {
     display: flex;
     width: 100%;
     padding-left: 42px;
+    padding: 12px 16px 12px 32px;
+    margin: 0;
+    background-color: var(--white-color);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input,
 .form-field textarea {
     padding: 12px 16px;
     margin: 0;
@@ -339,9 +343,12 @@ button.modal-button {
 .form-field textarea:focus {
     border: 2px solid var(--accent-color);
 }
-.form-checkbox label {
+.form-checkbox {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+.form-checkbox label {
+    display: flex;
     margin-left: 0;
     font-weight: 400;
     font-size: 14px;
@@ -353,17 +360,19 @@ button.modal-button {
 .check-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
+    width: 405px;
 }
 .check-text span {
+    display: inline-flex;
+    margin-right: 7px;
+    
+    align-items: center;
     width: 16px;
     height: 15px;
     border: 2px solid var(--primary-text-color);
     border-radius: 2px;
-    margin-right: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     fill: transparent;
     background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
