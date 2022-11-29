@@ -341,15 +341,19 @@ button.modal-button {
 }
 .form-field textarea:hover,
 .form-field textarea:focus {
-    border: 2px solid var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 .form-checkbox {
+    position: relative;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 }
 .form-checkbox label {
     display: flex;
+    position: absolute;
+    width: 100%;
     margin-left: 0;
+    padding-bottom: 30px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -364,6 +368,7 @@ button.modal-button {
     flex-direction: row;
     width: 405px;
 }
+
 .check-text span {
     display: inline-flex;
     margin-right: 7px;
@@ -647,7 +652,7 @@ button.modal-button {
     border-radius: 4px;
     padding: 6px 22px;
     border: none;
-    min-width: 130px;
+    
     cursor: pointer;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -676,7 +681,6 @@ button.modal-button {
     overflow: hidden;
 }
 .project-text {
- 
     position: absolute;
     top: 0;
     width: 100%;
@@ -692,7 +696,6 @@ button.modal-button {
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
-
 }
 .project-overlay {
     
@@ -702,7 +705,6 @@ button.modal-button {
     opacity: 1;
     transform: translateY(0);
 }
-
 .project-image {
     display: block;
 }
@@ -737,7 +739,6 @@ button.modal-button {
     margin-right: 70px;
 }
 .logo-footer {
-
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.19;
@@ -778,9 +779,7 @@ address {
 .footer-contact:focus {
     color: var(--accent-color);
 }
-.social {
-    
-}
+
 .social-title {
     font-family: inherit;
     font-style: normal;
@@ -820,6 +819,7 @@ address {
 }
 .footer-form {
     display: flex;
+    margin-left: 93px;
     justify-content: flex-end;
 }
 .footer-input {
@@ -836,7 +836,7 @@ address {
     align-items: center;
     letter-spacing: 0.03em;
     
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--contacts-footer-color);
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -846,7 +846,7 @@ address {
 label {
     display: flex;
     flex-direction: column;
-    margin-left: 93px;
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

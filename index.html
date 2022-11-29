@@ -78,7 +78,7 @@
                             </div>
                             <div class="form-field">
                                 <label for="feedback">Коментар</label>
-                                <textarea name="feedback" id="feedback" rows="5" class="feedback" placeholder="Введіть текст"></textarea>
+                                <textarea name="feedback" id="feedback" cols="15" rows="5" class="feedback" placeholder="Введіть текст"></textarea>
                             </div>
                             <div class="form-checkbox">
                                 <input type="checkbox" name="policy" class="modal-check is-hidden" id="policy" required></input>
@@ -416,20 +416,18 @@
                 </li>
             </ul>
             </div>
-            <div class="input">
-                <form action="email" class="footer-form">
-                    <label for="email">
-                        Підпишіться на розсилку
-                        <input type="email" placeholder="E-mail" class="footer-input" required>
-                    </label>
-                    <button type="submit" class="button footer-button">
-                        Підписатися
-                        <svg class="send" width="24" height="24">
-                            <use href="./images/icons.svg#icon-send"></use>
-                        </svg> 
-                    </button>
-                </form>
-            </div>
+            <form action="email" class="footer-form">
+                <label for="email">
+                    Підпишіться на розсилку
+                    <input type="email" placeholder="E-mail" class="footer-input" required>
+                </label>
+                <button type="submit" class="button footer-button">
+                    Підписатися
+                    <svg class="send" width="24" height="24">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg> 
+                </button>
+            </form>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
