@@ -346,14 +346,14 @@ button.modal-button {
 .form-checkbox {
     position: relative;
     margin-top: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
 }
 .form-checkbox label {
     display: flex;
-    position: absolute;
+    
     width: 100%;
     margin-left: 0;
-    padding-bottom: 30px;
+    
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -392,12 +392,15 @@ button.modal-button {
     border-color: var(--accent-color);
 }
 .modal-check {
-    position: fixed;
+    
     top: 0;
     left: 0;
 }
 .modal-check.is-hidden {
-    visibility: hidden;
+    
+    position: absolute;
+    top: 5px;
+    left: 26px;
     opacity: 0;
     pointer-events: none;
 }
