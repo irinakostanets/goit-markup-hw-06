@@ -237,7 +237,7 @@ p {color: var(--p-text-color);}
     transform: translate(-50%,-50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-button.modal-button {
+.modal-button {
     position: absolute;
     display: block;
     width: 30px;
@@ -278,7 +278,7 @@ button.modal-button {
 }
 .input-wrapper {
     position: relative;
-    margin-bottom: 10px;
+    
 }
 .modal-icon {
     position: absolute;
@@ -345,8 +345,8 @@ button.modal-button {
 }
 .form-checkbox {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .form-checkbox label {
     display: flex;
@@ -378,11 +378,12 @@ button.modal-button {
     height: 15px;
     border: 2px solid var(--primary-text-color);
     border-radius: 2px;
+    cursor: pointer;
     fill: transparent;
     background-color: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
+
 .modal-check:checked + .check-text span {
     background-color: var(--accent-color);
     fill: var(--white-color);
@@ -392,7 +393,6 @@ button.modal-button {
     border-color: var(--accent-color);
 }
 .modal-check {
-    
     top: 0;
     left: 0;
 }
@@ -407,6 +407,7 @@ button.modal-button {
 .modal-policy {
     color: var(--accent-color);
     text-decoration: underline;
+    margin-left: 3px;
     
 }
 .modal-button-sub {
@@ -768,14 +769,15 @@ address {
     text-decoration: none;
 }
 .footer-contact {
-    color: var(--contacts-footer-color);
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
     text-decoration: none;
-
+    color: var(--contacts-footer-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .footer-contact:hover,
@@ -831,20 +833,27 @@ address {
     padding: 15px 16px;
     margin-top: 20px;
     width: 358px;
-    font-family: inherit;
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
-    
     color: var(--contacts-footer-color);
-
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: var(--dark-backgroud-color);
+}
+
+.footer-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: var(--contacts-footer-color);
 }
 label {
     display: flex;
