@@ -372,7 +372,6 @@ p {color: var(--p-text-color);}
 .check-text span {
     display: inline-flex;
     margin-right: 7px;
-    
     align-items: center;
     width: 16px;
     height: 15px;
@@ -397,7 +396,6 @@ p {color: var(--p-text-color);}
     left: 0;
 }
 .modal-check.is-hidden {
-    
     position: absolute;
     top: 5px;
     left: 26px;
@@ -424,7 +422,6 @@ p {color: var(--p-text-color);}
 
     color: var(--white-color);
     background: var(--accent-color);
-    
     border-color: var(--accent-color);
     border-radius: 4px;
     border: none;
@@ -487,7 +484,6 @@ p {color: var(--p-text-color);}
 }
 .feature-text {
     margin-top: 0;
-
     font-size: 14px;
     line-height: 1.71;
 }
@@ -592,7 +588,6 @@ p {color: var(--p-text-color);}
 }
 .member-soc-icon {
     fill: #AFB1B8;
-
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -822,6 +817,8 @@ address {
     background-color: var(--accent-color);
     
 }
+/*Footer-form*/
+
 .footer-form {
     display: flex;
     margin-left: 93px;
